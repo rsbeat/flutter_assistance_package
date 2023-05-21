@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assistant/injector.dart';
-import 'package:flutter_assistant/screen.dart';
+
+import 'package:flutter_assistant_package/injector.dart';
+import 'package:flutter_assistant_package/screen.dart';
 
 void main() {
   configureDependencies();

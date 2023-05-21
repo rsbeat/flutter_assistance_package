@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_assistant/injector.dart';
-import 'package:flutter_assistant/network/urls_request.dart';
+
+import 'package:flutter_assistant_package/injector.dart';
+import 'package:flutter_assistant_package/network/urls_request.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

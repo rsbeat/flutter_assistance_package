@@ -1,14 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_assistant/data/model/auth_type_model.dart';
-import 'package:flutter_assistant/data/model/otp_model.dart';
-import 'package:flutter_assistant/data/model/register_model.dart';
-import 'package:flutter_assistant/data/model/user_me_model.dart';
-import 'package:flutter_assistant/data/repo/auth_repository.dart';
-import 'package:flutter_assistant/data/repo/badge_repository.dart';
-import 'package:flutter_assistant/data/repo/comment_repository.dart';
-import 'package:flutter_assistant/injector.dart';
-import 'package:flutter_assistant/network/failures.dart';
+
+import 'package:flutter_assistant_package/data/repo/badge_repository.dart';
+import 'package:flutter_assistant_package/injector.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
