@@ -1,21 +1,20 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_assistant/data/model/auth_type_model.dart';
-import 'package:flutter_assistant/data/model/badge_model.dart';
-import 'package:flutter_assistant/data/model/card_model.dart';
-import 'package:flutter_assistant/data/model/cms_model.dart';
-import 'package:flutter_assistant/data/model/comment_model.dart';
-import 'package:flutter_assistant/data/model/coupon_model.dart';
-import 'package:flutter_assistant/data/model/gift_model.dart';
-import 'package:flutter_assistant/data/model/otp_model.dart';
-import 'package:flutter_assistant/data/model/product/product_chapters_model.dart';
-import 'package:flutter_assistant/data/model/product/product_search_model.dart';
-import 'package:flutter_assistant/data/model/product/product_sort_model.dart';
-import 'package:flutter_assistant/data/model/register_model.dart';
-import 'package:flutter_assistant/data/model/survey_model.dart';
-import 'package:flutter_assistant/data/model/terms_model.dart';
-import 'package:flutter_assistant/data/model/user_me_model.dart';
-import 'package:flutter_assistant/data/repo/cms_repository.dart';
-import 'package:flutter_assistant/data/repo/comment_repository.dart';
+import 'package:flutter_assistant_package/data/model/auth_type_model.dart';
+import 'package:flutter_assistant_package/data/model/badge_model.dart';
+import 'package:flutter_assistant_package/data/model/card_model.dart';
+import 'package:flutter_assistant_package/data/model/cms_model.dart';
+import 'package:flutter_assistant_package/data/model/comment_model.dart';
+import 'package:flutter_assistant_package/data/model/coupon_model.dart';
+import 'package:flutter_assistant_package/data/model/gift_model.dart';
+import 'package:flutter_assistant_package/data/model/otp_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_chapters_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_search_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_sort_model.dart';
+import 'package:flutter_assistant_package/data/model/register_model.dart';
+import 'package:flutter_assistant_package/data/model/survey_model.dart';
+import 'package:flutter_assistant_package/data/model/terms_model.dart';
+import 'package:flutter_assistant_package/data/model/user_me_model.dart';
+
 import 'package:retrofit/retrofit.dart';
 
 part 'urls_request.g.dart';

@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_assistant/injector.dart';
-import 'package:flutter_assistant/network/failures.dart';
+import 'package:flutter_assistant_package/injector.dart';
+import 'package:flutter_assistant_package/network/failures.dart';
+
 import 'package:retrofit/retrofit.dart';
 import 'network_info.dart';
 

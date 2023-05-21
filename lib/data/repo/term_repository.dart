@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_assistant/data/model/badge_model.dart';
-import 'package:flutter_assistant/data/model/gift_model.dart';
-import 'package:flutter_assistant/data/model/terms_model.dart';
-import 'package:flutter_assistant/network/failures.dart';
-import 'package:flutter_assistant/network/safe_api_call.dart';
-import 'package:flutter_assistant/network/urls_request.dart';
-import 'package:flutter_assistant/utils/enums.dart';
+import 'package:flutter_assistant_package/data/model/terms_model.dart';
+import 'package:flutter_assistant_package/network/failures.dart';
+import 'package:flutter_assistant_package/network/safe_api_call.dart';
+import 'package:flutter_assistant_package/network/urls_request.dart';
+import 'package:flutter_assistant_package/utils/enums.dart';
+
 import 'package:injectable/injectable.dart';
 
 abstract class ITermsRepository {

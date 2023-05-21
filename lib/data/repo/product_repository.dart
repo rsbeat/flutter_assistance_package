@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_assistant/data/model/product/product_chapters_model.dart';
-import 'package:flutter_assistant/data/model/product/product_search_model.dart';
-import 'package:flutter_assistant/data/model/product/product_sort_model.dart';
-
-import 'package:flutter_assistant/network/failures.dart';
-import 'package:flutter_assistant/network/safe_api_call.dart';
-import 'package:flutter_assistant/network/urls_request.dart';
+import 'package:flutter_assistant_package/data/model/product/product_chapters_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_search_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_sort_model.dart';
+import 'package:flutter_assistant_package/network/failures.dart';
+import 'package:flutter_assistant_package/network/safe_api_call.dart';
+import 'package:flutter_assistant_package/network/urls_request.dart';
 
 abstract class IProductRepository {
   Future<Either<Failure, ProductSearchModel>> searchProducts();

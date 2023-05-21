@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_assistant/data/model/auth_type_model.dart';
-import 'package:flutter_assistant/data/model/otp_model.dart';
-import 'package:flutter_assistant/data/model/register_model.dart';
-import 'package:flutter_assistant/data/model/user_me_model.dart';
-import 'package:flutter_assistant/injector.dart';
-import 'package:flutter_assistant/network/failures.dart';
-import 'package:flutter_assistant/network/safe_api_call.dart';
-import 'package:flutter_assistant/network/urls_request.dart';
+import 'package:flutter_assistant_package/data/model/auth_type_model.dart';
+import 'package:flutter_assistant_package/data/model/otp_model.dart';
+import 'package:flutter_assistant_package/data/model/register_model.dart';
+import 'package:flutter_assistant_package/data/model/user_me_model.dart';
+import 'package:flutter_assistant_package/network/failures.dart';
+import 'package:flutter_assistant_package/network/safe_api_call.dart';
+import 'package:flutter_assistant_package/network/urls_request.dart';
+
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 

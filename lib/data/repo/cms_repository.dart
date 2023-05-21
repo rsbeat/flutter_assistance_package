@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_assistant/data/model/cms_model.dart';
-import 'package:flutter_assistant/network/failures.dart';
-import 'package:flutter_assistant/network/safe_api_call.dart';
-import 'package:flutter_assistant/network/urls_request.dart';
-import 'package:flutter_assistant/utils/enums.dart';
+import 'package:flutter_assistant_package/data/model/cms_model.dart';
+import 'package:flutter_assistant_package/network/failures.dart';
+import 'package:flutter_assistant_package/network/safe_api_call.dart';
+import 'package:flutter_assistant_package/network/urls_request.dart';
+
 import 'package:injectable/injectable.dart';
 
-
+import '../../utils/enums.dart';
 
 abstract class ICMSRepository {
   Future<Either<Failure, CMSModel>> get({
@@ -71,20 +71,20 @@ class CMSRepository extends ICMSRepository with SafeApiCall {
     List<Map<String, dynamic>> columns = const [],
     List<Map<String, dynamic>> byWith = const [],
     int perPage = 20,
-  }) async{
+  }) async {
     final either = await call(restClient.searchCms(keyword, columns, byWith, perPage));
     return either.fold(
-          (l) => left(l),
-          (r) => right(r!),
+      (l) => left(l),
+      (r) => right(r!),
     );
   }
 
   @override
-  Future<Either<Failure, CMSModel>> signal(int postId, String type, String myValue) async{
+  Future<Either<Failure, CMSModel>> signal(int postId, String type, String myValue) async {
     final either = await call(restClient.signalCms(postId, type, myValue));
     return either.fold(
-          (l) => left(l),
-          (r) => right(r!),
+      (l) => left(l),
+      (r) => right(r!),
     );
   }
 }

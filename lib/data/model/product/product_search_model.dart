@@ -1,4 +1,4 @@
-import 'package:flutter_assistant/data/model/product/product_data_model.dart';
+import 'package:flutter_assistant_package/data/model/product/product_data_model.dart';
 
 class ProductSearchModel {
   final bool success;

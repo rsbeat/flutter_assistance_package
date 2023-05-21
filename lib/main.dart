@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_assistant_package/injector.dart';
 import 'package:flutter_assistant_package/screen.dart';
 
-void main() {
-  configureDependencies();
-  runApp(const MyApp());
-}
+// void main() {
+//   configureDependencies();
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
