@@ -64,7 +64,8 @@ class FlutterAssistant {
 @singleton
 class AssistantSaveData {
   void _setDataToPref({required String appToken, required String baseURL}) async {
-    final pref = locator<SharedPreferences>();
+    // final pref = locator<SharedPreferences>();
+    final pref = await SharedPreferences.getInstance();
     await pref.setString("Token", appToken);
     await pref.setString("BaseURL", baseURL);
   }
