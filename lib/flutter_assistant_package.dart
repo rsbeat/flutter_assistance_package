@@ -20,6 +20,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class FlutterAssistant {
   final repo = locator<IAuthRepository>();
+  
 
   final saveData = locator<AssistantSaveData>();
   FlutterAssistant.init({required String appToken, required String baseURL}) {

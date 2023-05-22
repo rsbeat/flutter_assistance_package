@@ -39,9 +39,11 @@ abstract class NetworkModule {
 
   @lazySingleton
   RestClient restClient(Dio dio) {
+    final pref = locator<SharedPreferences>();
+    final test = pref.getString("BaseURL");
     return RestClient(
       dio,
-      baseUrl: "https://ada.7learn.com/api/v1/",
+      baseUrl: pref.getString("BaseURL") ?? "",
     );
   }
 }
