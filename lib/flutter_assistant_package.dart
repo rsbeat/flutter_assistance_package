@@ -23,7 +23,7 @@ class FlutterAssistant {
   FlutterAssistant();
   final saveData = locator<AssistantSaveData>();
 
-  init({required String appToken, required String baseURL}) async {
+  Future init({required String appToken, required String baseURL}) async {
     // final saveData = await locator<AssistantSaveData>();
     await saveData._setDataToPref(appToken: appToken, baseURL: baseURL);
   }
