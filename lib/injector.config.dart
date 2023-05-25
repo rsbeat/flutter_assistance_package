@@ -51,13 +51,13 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     final networkModule = _$NetworkModule();
-    final sharedModel = _$SharedModel();
+    final registerModule = _$RegisterModule();
     gh.singleton<_i3.AssistantSaveData>(_i3.AssistantSaveData());
     gh.lazySingleton<_i4.Dio>(() => networkModule.dio());
     gh.lazySingleton<_i5.NetworkInfo>(() => _i5.NetworkInfoImpl());
     gh.lazySingleton<_i6.RestClient>(
         () => networkModule.restClient(gh<_i4.Dio>()));
-    gh.singletonAsync<_i7.SharedPreferences>(() => sharedModel.shared());
+    gh.singletonAsync<_i7.SharedPreferences>(() => registerModule.prefs);
     gh.factory<_i8.IAuthRepository>(
         () => _i8.AuthRepository(gh<_i6.RestClient>()));
     gh.factory<_i9.IBadgeRepository>(
@@ -80,6 +80,6 @@ extension GetItInjectableX on _i1.GetIt {
   }
 }
 
-class _$SharedModel extends _i17.SharedModel {}
+class _$RegisterModule extends _i17.RegisterModule {}
 
 class _$NetworkModule extends _i18.NetworkModule {}

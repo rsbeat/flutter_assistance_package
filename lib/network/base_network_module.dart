@@ -16,6 +16,7 @@ abstract class NetworkModule {
           QueuedInterceptorsWrapper(
             onRequest: (options, handler) async {
               final pref = locator<SharedPreferences>();
+              // final pref = await SharedPreferences.getInstance();
               options.headers['Authorization'] = "Bearer ${pref.getString("UserToken")}";
               options.headers['accept-language'] = "fa";
               return handler.next(options);

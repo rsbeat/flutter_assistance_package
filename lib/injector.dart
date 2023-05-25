@@ -11,11 +11,17 @@ void configureDependencies() async {
   locator.init();
 }
 
+// @module
+// abstract class SharedModel {
+//   @singleton
+//   Future<SharedPreferences> shared() async {
+//     final pref = await SharedPreferences.getInstance();
+//     return pref;
+//   }
+// }
+
 @module
-abstract class SharedModel {
-  @singleton
-  Future<SharedPreferences> shared() async {
-    final pref = await SharedPreferences.getInstance();
-    return pref;
-  }
+abstract class RegisterModule {
+  @Singleton()
+  Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
 }
