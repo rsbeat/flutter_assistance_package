@@ -21,12 +21,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 class FlutterAssistant {
   final repo = locator<IAuthRepository>();
   FlutterAssistant();
-
   final saveData = locator<AssistantSaveData>();
-  FlutterAssistant.init({required String appToken, required String baseURL}) {
-    saveData._setDataToPref(appToken: appToken, baseURL: baseURL);
 
-    return;
+  init({required String appToken, required String baseURL}) async {
+    // final saveData = await locator<AssistantSaveData>();
+    await saveData._setDataToPref(appToken: appToken, baseURL: baseURL);
   }
 
   Future<Either<Failure, AuthTypeModel>> authType() async {
@@ -63,7 +62,7 @@ class FlutterAssistant {
 
 @singleton
 class AssistantSaveData {
-  void _setDataToPref({required String appToken, required String baseURL}) async {
+  Future _setDataToPref({required String appToken, required String baseURL}) async {
     // final pref = locator<SharedPreferences>();
     final pref = await SharedPreferences.getInstance();
     await pref.setString("Token", appToken);
