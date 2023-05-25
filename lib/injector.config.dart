@@ -55,27 +55,27 @@ extension GetItInjectableX on _i1.GetIt {
     gh.singleton<_i3.AssistantSaveData>(_i3.AssistantSaveData());
     gh.lazySingleton<_i4.Dio>(() => networkModule.dio());
     gh.lazySingleton<_i5.NetworkInfo>(() => _i5.NetworkInfoImpl());
-    gh.lazySingleton<_i6.RestClient>(
+    gh.lazySingletonAsync<_i6.RestClient>(
         () => networkModule.restClient(gh<_i4.Dio>()));
     gh.singletonAsync<_i7.SharedPreferences>(() => registerModule.prefs);
-    gh.factory<_i8.IAuthRepository>(
-        () => _i8.AuthRepository(gh<_i6.RestClient>()));
-    gh.factory<_i9.IBadgeRepository>(
-        () => _i9.BadgeRepository(gh<_i6.RestClient>()));
-    gh.factory<_i10.ICMSRepository>(
-        () => _i10.CMSRepository(gh<_i6.RestClient>()));
-    gh.factory<_i11.ICardRepository>(
-        () => _i11.CardRepository(gh<_i6.RestClient>()));
-    gh.factory<_i12.ICommentRepository>(
-        () => _i12.CommentRepository(gh<_i6.RestClient>()));
-    gh.factory<_i13.ICouponRepository>(
-        () => _i13.CouponRepository(gh<_i6.RestClient>()));
-    gh.factory<_i14.IGiftRepository>(
-        () => _i14.GiftRepository(gh<_i6.RestClient>()));
-    gh.factory<_i15.ISurveyRepository>(
-        () => _i15.SurveyRepository(gh<_i6.RestClient>()));
-    gh.factory<_i16.ITermsRepository>(
-        () => _i16.TermsRepository(gh<_i6.RestClient>()));
+    gh.factoryAsync<_i8.IAuthRepository>(
+        () async => _i8.AuthRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i9.IBadgeRepository>(
+        () async => _i9.BadgeRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i10.ICMSRepository>(
+        () async => _i10.CMSRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i11.ICardRepository>(
+        () async => _i11.CardRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i12.ICommentRepository>(
+        () async => _i12.CommentRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i13.ICouponRepository>(
+        () async => _i13.CouponRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i14.IGiftRepository>(
+        () async => _i14.GiftRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i15.ISurveyRepository>(
+        () async => _i15.SurveyRepository(await getAsync<_i6.RestClient>()));
+    gh.factoryAsync<_i16.ITermsRepository>(
+        () async => _i16.TermsRepository(await getAsync<_i6.RestClient>()));
     return this;
   }
 }

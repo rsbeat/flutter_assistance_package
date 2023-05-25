@@ -63,7 +63,8 @@ class FlutterAssistant {
 @singleton
 class AssistantSaveData {
   Future _setDataToPref({required String appToken, required String baseURL}) async {
-    final pref = locator<SharedPreferences>();
+    // final pref = locator<SharedPreferences>();
+    final pref = await locator.getAsync<SharedPreferences>();
     // final pref = await SharedPreferences.getInstance();
 
     await pref.setString("Token", appToken);
@@ -71,7 +72,8 @@ class AssistantSaveData {
   }
 
   void _setLoginToken({required String token}) async {
-    final pref = locator<SharedPreferences>();
+    // final pref = locator<SharedPreferences>();
+    final pref = await locator.getAsync<SharedPreferences>();
     // final pref = await SharedPreferences.getInstance();
     pref.setString("UserToken", token);
   }

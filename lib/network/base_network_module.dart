@@ -15,7 +15,8 @@ abstract class NetworkModule {
         [
           QueuedInterceptorsWrapper(
             onRequest: (options, handler) async {
-              final pref = locator<SharedPreferences>();
+              // final pref = locator<SharedPreferences>();
+              final pref = await locator.getAsync<SharedPreferences>();
               // final pref = await SharedPreferences.getInstance();
               options.headers['Authorization'] = "Bearer ${pref.getString("UserToken")}";
               options.headers['accept-language'] = "fa";
@@ -39,8 +40,9 @@ abstract class NetworkModule {
   }
 
   @lazySingleton
-  RestClient restClient(Dio dio) {
-    final pref = locator<SharedPreferences>();
+  Future<RestClient> restClient(Dio dio) async {
+    // final pref = locator<SharedPreferences>();
+    final pref = await locator.getAsync<SharedPreferences>();
     final test = pref.getString("BaseURL");
     return RestClient(
       dio,
